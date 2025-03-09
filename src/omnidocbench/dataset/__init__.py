@@ -1,16 +1,13 @@
-from .recog_dataset import *
-from .end2end_dataset import *
-from .detection_dataset import *
-from .md2md_dataset import *
-from registry.registry import DATASET_REGISTRY
+from omnidocbench.registry.registry import DATASET_REGISTRY
+
+from .detection_dataset import DetectionDataset
+from .end2end_dataset import End2EndDataset
+from .md2md_dataset import Md2MdDataset
+from .recog_dataset import RecognitionTextDataset
 
 __all__ = [
-    "RecognitionFormulaDataset",
     "End2EndDataset",
     "DetectionDataset",
     "Md2MdDataset",
-    "OmniDocBenchSingleModuleDataset",
-    "DetectionDatasetSimpleFormat"
+    "RecognitionTextDataset",
 ]
-
-print('DATASET_REGISTRY: ', DATASET_REGISTRY.list_items())

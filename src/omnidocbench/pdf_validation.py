@@ -4,10 +4,12 @@ import io
 import os
 import pathlib
 
-import dataset  # noqa: F401
-import task  # noqa: F401
 import yaml
-from registry.registry import DATASET_REGISTRY, EVAL_TASK_REGISTRY
+
+import omnidocbench.dataset
+import omnidocbench.metrics
+import omnidocbench.task
+from omnidocbench.registry.registry import DATASET_REGISTRY, EVAL_TASK_REGISTRY
 
 
 def process_args(args):
